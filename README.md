@@ -4,6 +4,8 @@
 
 Dashboard desktop para quem trabalha com vários repositórios ao mesmo tempo. Construído em Electron + Vue 3 + TypeScript.
 
+![Orbit screenshot](docs/screenshot.png)
+
 ---
 
 ## O problema
