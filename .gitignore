@@ -1,0 +1,143 @@
+# ─────────────────────────────────────────────────────────
+# Dependencies
+# ─────────────────────────────────────────────────────────
+node_modules/
+jspm_packages/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# ─────────────────────────────────────────────────────────
+# Build output
+# ─────────────────────────────────────────────────────────
+dist/
+build/
+out/
+release/
+app-builds/
+*.tsbuildinfo
+
+# Vite / electron-vite caches
+.vite/
+.cache/
+*.local
+
+# Stray / generated configs and bundles
+electron.vite.config.*.mjs
+electron.vite.config.*.cjs
+electron.vite.config.*.js.timestamp-*
+/index.js
+
+# ─────────────────────────────────────────────────────────
+# Environment & secrets
+# ─────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.keystore
+secrets.json
+credentials.json
+
+# ─────────────────────────────────────────────────────────
+# Logs
+# ─────────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+lerna-debug.log*
+
+# ─────────────────────────────────────────────────────────
+# Editor / IDE
+# ─────────────────────────────────────────────────────────
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.history/
+.ionide/
+.project
+.classpath
+.settings/
+
+# ─────────────────────────────────────────────────────────
+# OS
+# ─────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ─────────────────────────────────────────────────────────
+# Tests / coverage
+# ─────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+.jest-cache/
+*.lcov
+
+# ─────────────────────────────────────────────────────────
+# Misc caches
+# ─────────────────────────────────────────────────────────
+.eslintcache
+.stylelintcache
+.parcel-cache/
+.turbo/
+.next/
+.nuxt/
+.svelte-kit/
+.docusaurus/
+
+# Temp folders
+tmp/
+temp/
+.tmp/
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# ─────────────────────────────────────────────────────────
+# AI assistants — local config only, never commit
+# ─────────────────────────────────────────────────────────
+.claude/
+.cursor/
+.windsurf/
+.copilot/
+.continue/
+.aider*
+CLAUDE.md
+AGENTS.md
+.github/copilot-instructions.md
+
+# ─────────────────────────────────────────────────────────
+# Project-specific
+# ─────────────────────────────────────────────────────────
+# Local project workspace dumps
+*.gitdash.json
+*.orbit.json
+
+# Local SQLite copies fora do userData (debug)
+*.sqlite
+*.sqlite3
+*.db
