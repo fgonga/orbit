@@ -76,6 +76,25 @@ Toda a operação git/IO acontece no main process; o renderer fala com ele só p
 
 ---
 
+## Pré-requisitos
+
+O Orbit usa módulos nativos (`better-sqlite3`) que são recompilados contra a ABI do Electron no `postinstall`. Para isso precisas de um toolchain de C++ instalado **antes** de correr `npm install`.
+
+- **Node.js** — versão 24+ (ver `.nvmrc`). Com `nvm` instalado, basta correr `nvm use` na raiz do projecto.
+- **macOS** — Xcode Command Line Tools:
+  ```bash
+  xcode-select --install
+  ```
+- **Linux (Debian/Ubuntu)** — build tools + Python:
+  ```bash
+  sudo apt install build-essential python3
+  ```
+- **Windows** — Visual Studio Build Tools com o workload *"Desktop development with C++"* + Python 3. Mais fácil pelo [instalador oficial](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+
+Se o `npm install` falhar com erros do `node-gyp` (`gyp ERR!`, `xcrun: error`, `Python not found`), é quase certo que falta um destes pré-requisitos.
+
+---
+
 ## Como começar
 
 ```bash
@@ -83,7 +102,10 @@ Toda a operação git/IO acontece no main process; o renderer fala com ele só p
 git clone <url-do-repo>
 cd orbit
 
-# instalar
+# (opcional) usar a versão de Node certa
+nvm use
+
+# instalar — corre electron-rebuild automaticamente no postinstall
 npm install
 
 # correr em dev (hot-reload)
