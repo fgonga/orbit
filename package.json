@@ -4,7 +4,12 @@
   "description": "The developer's cockpit — multi-repo git dashboard, issues, focus.",
   "author": "BIT — Bantu Internet Technologies, Lda.",
   "main": "out/main/index.js",
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
+    "postinstall": "electron-rebuild",
     "dev": "electron-vite dev",
     "build": "electron-vite build",
     "preview": "electron-vite preview",
